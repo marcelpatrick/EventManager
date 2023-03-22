@@ -1,10 +1,13 @@
 # EventManager
 
-- Add a Delegate Declarations C++ Class (UObject or Empty class type)
+- Add a DelegateDeclarationsContainer C++ Class (Object type) to store all the delegate declarations of the game
 - Add an Event Manager C++ Class (AActor type)
   - Create a BP based on this class
   - Add it to the scene
   - In project settings, Create and new Gamaplay Tag "Event Manager" and tag this BP with this tag
+
+- Delegate Declarations
+  - Declare the delegates and their objects here
 
 - Event Manager
   - In the event manager header file, include: 
