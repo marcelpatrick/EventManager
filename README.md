@@ -1,6 +1,8 @@
 # EventManager
 
 - We will use a separate class to declare delegates (DelegateDeclarationsContainer) and a separate class to Manage events (EventManager)
+- Create a c++ class and a blueprint derived from this class for the Sender, Receiver and EventManager.
+- For the EventManager, tag it with "EventManager" tag in project settings and, in its blueprint, create a tag with the same name
 
 # Delegate Declarations Container
 - It will declare the multicast delegate type object in its header file
