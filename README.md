@@ -6,6 +6,7 @@
 
 # Delegate Declarations Container
 - It will declare the multicast delegate type object in its header file
+
 ```cpp
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
@@ -322,9 +323,7 @@ void AReceiver::EndPlay(const EEndPlayReason::Type EndPlayReason)
   - In the EventManager class, GetMessageEvent() will be used to fetch the delegate object FMessageEvent and pass it to the Receiver so that it can bind the listener function Receive() to the delegate function Send()
 
 - Then add RemoveInvoker() and RemoveListener() to remove the callback and sender objects to their respective maps and arrays.
-  
-  ```cpp
-  
+```cpp
 #include "Sender.h"
 #include "Receiver.h"
 #include "Delegates/DelegateInstanceInterface.h"
@@ -373,8 +372,9 @@ private:
 			//And since each FDelegateHandle variable from the Receiver is associated to its respective Sender delegate, we need to pass another map to find them using the key-value pairs: Sender-FDelegateHandle object
 	TMap<AReceiver*, TMap<ASender*, FDelegateHandle>> MyReceivers;
 };
-  ```
-  ```cpp
+```
+
+```cpp
   #include "EventManager.h"
 
 // Sets default values
@@ -462,4 +462,4 @@ void AEventManager::RemoveListener(AReceiver* Receiver)
 	//Remove listener (Receiver)
 	MyReceivers.Remove(Receiver);
 }
-  ```
+```
